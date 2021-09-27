@@ -39,7 +39,7 @@ console.log(letters)
 //08 - Template 
 
 var age = 35;
-var template = console.log(`I'm ${age} years old`);
+var template =`I'm ${age} years old`;
 console.log(template);
 
 
