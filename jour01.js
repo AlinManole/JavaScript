@@ -33,7 +33,7 @@ console.log(basic , basicUp , basicDown);
 //07 - Split
 
 var word ="banana";
-var letters = word.split("");
+var letters = word.split('');
 console.log(letters)
 
 //08 - Template 
