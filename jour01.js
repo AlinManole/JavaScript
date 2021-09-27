@@ -45,6 +45,11 @@ console.log(template);
 
 // Bonus 
 
-var changed ='"Bonjour"';
-console.log(changed.replace('o', 'a').replace('o', 'a'));
+var changed = "Bonjour"
 
+ // var changed ="Bonjour";
+// console.log(changed.replace('o', 'a').replace('o', 'a'));
+
+
+changed.replaceAll("a","o")
+console.log(changed)
