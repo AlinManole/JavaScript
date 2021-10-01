@@ -1,137 +1,165 @@
-//01 - Number
+// number
+var integer = 102
+var float = 13.9
+console.log(integer, float)
 
-var integer = 102;
-var float = 13.9;
-console.log(integer , float);
+// convert
+var basic = 34
+var stringified = basic.toString()
+console.log(typeof stringified)
+console.log(stringified)
 
-//02 - Comvert
+// round
+var num = 1.5
+var rounded = Math.round(num)
+console.log(rounded)
 
-var basic = 34;
-var stringified = basic.toString();
-console.log(stringified);
-
-//03 - Round 
-
-var num = 1.5;
-var rounded = Math.round(num);
-console.log(rounded);
-
-//04 - Arithmetique
-
-var test = 12;
+// arithmetique
+var test = 12
 var bis = 5
+console.log(test + bis)
+console.log(test - bis)
+console.log(test / bis)
+console.log(test * bis)
+console.log(test ** bis)
+console.log(test % bis)
 
-console.log(test + bis);
-console.log(test - bis);
-console.log(test * bis);
-console.log(test / bis);
-console.log(test ** bis);
-console.log(test % bis);
-
-
-//05 - Comparaison
-
-var test = 143;
+// Comparaison
+var test = 143
 var bis = 219
-console.log(test > bis);
-console.log(test < bis);
-console.log(test >= bis);
-console.log(test <= bis);
-console.log(test == bis);
-console.log(test === bis);
-console.log(test != bis);
-console.log(test !== bis);
+console.log(test < bis)
+console.log(test <= bis)
+console.log(test > bis)
+console.log(test >= bis)
+console.log(test == bis)
+console.log(test === bis)
+console.log(test != bis)
+console.log(test !== bis)
 
-//06 - Condition
+// Condition
+var limit = 50
+var score = 3
+var validScore = score >= limit
 
-var limit = 50;
-var score = 64;
-
-if( score >= limit ) {
-    console.log("Ok good !");
+if (validScore) {
+  console.log("Ok good!")
 } else {
-    console.log("Oh nooo...")
+  console.log("Oh noooo!")
 }
 
+// Condition II
+var password = "aze"
+var passwordSecured = password.length > 5
 
-//07 - Condition II
-
-var password = "azer";
-
-if (password.length > 5) {
-    console.log("The password is secure")
+if (passwordSecured) {
+  console.log("The password is secure")
 }
 
-//08 - Condition III
-
-if (score >= limit && password.length > 5) {
-    console.log("Everything is good")
-} else if ( score >= limit || password.length > 5 ) {
-    console.log("Something is good")
+// Condition III
+if (validScore && passwordSecured) {
+  console.log("Everything is good")
+} else if (validScore || passwordSecured) {
+  console.log("Something is good")
 } else {
-    console.log("Nothing is good")
+  console.log("Nothing is good")
 }
 
+// Bonus 1
+var min = 1
+var max = 6
+var random = Math.floor(Math.random() * (max - min + 1) + min)
 
-
-//Bonus
-
-var min = 1;
-var max = 6;
-
-var random = Math.floor(Math.random() * (max - min) + min)
 if (random === 6) {
-    console.log("Yes I win!")
+  console.log("Yes I win!")
 } else {
-    console.log("So close..the number was " + random)
+  console.log("So close..")
 }
 
-//Bonus II
-
-var month = "June"
+// Bonus 2
+var month = "October"
 
 switch (month) {
-	case "January": 
-		console.log("Winter");
-		break;
-	case "February": 
-		console.log("Winter");
-		break;
-	case "March": 
-		console.log("Spring");
-		break;
-	case "April": 
-		console.log("Spring");
-		break;
-	case "May": 
-		console.log("Spring");
-		break;
-	case "June": 
-		console.log("Summer");
-		break;
-	case "July": 
-		console.log("Summer");
-		break;
-    case "August": 
-		console.log("Summer");
-		break;
-    case "September": 
-		console.log("Autumn");
-		break;
-    case "October": 
-		console.log("Autumn");
-		break;
-    case "November": 
-		console.log("Autumn");
-		break;
-    case "December": 
-		console.log("Winter");
-		break;
-}
+  // winter
+  case "December":
+  case "January":
+  case "February":
+    console.log("Winter")
+    break
 
+  // spring
+  case "March":
+  case "April":
+  case "May":
+    console.log("Spring")
+    break
+
+  // summer
+  case "June":
+  case "July":
+  case "August":
+    console.log("Summer")
+    break
+
+  // Automn
+  case "September":
+  case "October":
+  case "November":
+    console.log("Autumn")
+    break
+
+  default:
+    console.log("That's not a season")
+}
 
 // Bonus 3
 
-var roundedNumber = 3.6;
+// Solution de Karimou
+var roundedNumber = 12.999999999
 
-if (r)
+if (roundedNumber - 0.4 <= Math.floor(roundedNumber)) {
+  console.log(Math.floor(roundedNumber))
+} else {
+  console.log(Math.ceil(roundedNumber))
+}
+
+// Solution de Jong
+var roundedNumber = 12.99999
+var mathCeil = Math.ceil(roundedNumber)
+var mathFloor = Math.floor(roundedNumber)
+var result = mathCeil - roundedNumber
+
+if (result <= 0.5) {
+  console.log(mathCeil)
+} else {
+  console.log(mathFloor)
+}
+
+// Solution d'Edouard
+var roundedNumber = 12.1
+
+if (roundedNumber > Math.ceil(roundedNumber) - 0.5) {
+  roundedNumber = Math.ceil(roundedNumber)
+} else {
+  roundedNumber = Math.floor(roundedNumber)
+}
+
+console.log(roundedNumber)
+
+// Solution d'Evan
+var rNumber = 12.999999
+var numberCeil = Math.ceil(rNumber) - rNumber
+
+if(numberCeil <= 0.5){
+    console.log(Math.ceil(rNumber))
+} else {
+    console.log(Math.floor(rNumber))
+}
+
+// Solution d'Ahmed
+var roundedNumber = 12.4
+
+if (roundedNumber % 1 >= 0.5) {
+  console.log(Math.ceil(roundedNumber))
+} else {
+  console.log(Math.floor(roundedNumber))
+}

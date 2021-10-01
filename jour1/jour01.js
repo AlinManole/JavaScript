@@ -1,55 +1,59 @@
-// 01 - Hello World 
+// Hello world
+console.log("Hello world !")
 
-console.log("Hello World !");
 
-// 02 - String
+// String
+var test = "My name is Jong"
+console.log(test)
 
-var test = "My name is Alin";
-console.log(test);
+// Concatenation
+var firstName = "Jérémy"
+console.log("Nice to meet you " + firstName)
 
-//03 - Concatenation 
+// string length
+var testLength = "I'm very long !"
+console.log(testLength.length)
 
-var name ="Alin"
-console.log("Nice to meet you " + name );
+// Replace
+var food = "croissant is meh"
+console.log(food)
+food = food.replace("meh", "so good")
+console.log(food)
 
-//04 - String Lenght
+// Up and Down
+var basic = "This is Cool"
+var basicUp = basic.toUpperCase()
+var basicDown = basic.toLowerCase()
+console.log(basic)
+console.log(basicUp)
+console.log(basicDown)
 
-var testLenght = "I'm very long !";
-console.log(testLenght.length);
-
-//05 - Replace
-
-var food = "croissant is meh";
-food = food.replace("meh", "so good");
-console.log(food);
-
-//06 - Up and Down 
-
-var basic = "This is Cool";
-var basicUp = basic.toUpperCase();
-var basicDown = basic.toLowerCase();
-console.log(basic , basicUp , basicDown);
-
-//07 - Split
-
-var word ="banana";
-var letters = word.split('');
+// Split
+var word = "banana"
+var letters = word.split("")
 console.log(letters)
 
-//08 - Template 
+// Template
+var age = "26"
+var template = `I'm ${age} years old`
+// => équivaut a: var template = "I'm " + age + " years old"
+console.log(template)
 
-var age = 35;
-var template =`I'm ${age} years old`;
-console.log(template);
 
+// Bonus
+var sentence1 = "Je suis sur la premiere ligne, \nje suis sur la deuxieme ligne"
+console.log(sentence1)
 
-// Bonus 
+var sentence2 = "Je m'appelle \"Benoit\""
+console.log(sentence2)
+
+var sentence3 = 'Je m\'appelle "Benoit"'
+console.log(sentence3)
+
+var sentence4 = `Je suis la premiere ligne
+je suis sur la deuxieme ligne`
+console.log(sentence4)
 
 var changed = "Bonjour"
-
- // var changed ="Bonjour";
-// console.log(changed.replace('o', 'a').replace('o', 'a'));
-
-
-changed.replaceAll("a","o")
+changed = changed.replaceAll("o", "a")
 console.log(changed)
